@@ -1,0 +1,130 @@
+/* karla-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/karla-v33-latin-regular.woff2') format('woff2'); 
+}
+
+/* karla-700 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/karla-v33-latin-700.woff2') format('woff2'); 
+}
+
+/* === CSS RESET === */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+:root {
+  /* == COLOR PALLETTE == */
+
+  /* Primary Color */
+  --clr-green-400: hsl(172, 67%, 45%);
+
+  /* Neutral Colors */
+  --clr-grey-50: hsl(189, 47%, 97%);
+  --clr-grey-200:  hsl(185, 41%, 84%);
+  --clr-grey-400: hsl(184, 14%, 56%);
+  --clr-grey-500: hsl(186, 14%, 43%);
+  --clr-white: hsl(0, 100%, 100%);
+  --clr-green-900: hsl(183, 100%, 15%);
+  --clr-red: hsl(4, 100%, 67%);
+
+  /* == TYPOGRAPHY == */
+
+  /* font family */
+  --ff-body: 'Space Mono', sans-serif;
+
+  /* font size */
+  --fs-form-input: 1.5rem;
+
+  /* font weights */
+  --fw-bold: 700;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xlg: 2.5rem;
+  --space-xxlg: 3rem;
+}
