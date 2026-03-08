@@ -1,19 +1,19 @@
-/* karla-regular - latin */
+/* === FONTS === */
+
 @font-face {
-  font-display: swap; 
-  font-family: 'Karla';
-  font-style: normal;
+  font-family: 'Overpass';
+  src: url('assets/fonts/overpass-v19-latin-regular.woff2') format('woff2');
   font-weight: 400;
-  src: url('../fonts/karla-v33-latin-regular.woff2') format('woff2'); 
+  font-style: normal;
+  font-display: swap;
 }
 
-/* karla-700 - latin */
 @font-face {
-  font-display: swap; 
-  font-family: 'Karla';
-  font-style: normal;
+  font-family: 'Overpass';
+  src: url('assets/fonts/overpass-v19-latin-700.woff2') format('woff2'); 
   font-weight: 700;
-  src: url('../fonts/karla-v33-latin-700.woff2') format('woff2'); 
+  font-style: normal;
+  font-display: swap; 
 }
 
 /* === CSS RESET === */
@@ -44,12 +44,6 @@ figure, blockquote, dl, dd {
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  line-height: 1.5;
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -98,26 +92,25 @@ textarea:not([rows]) {
   /* == COLOR PALLETTE == */
 
   /* Primary Color */
-  --clr-green-400: hsl(172, 67%, 45%);
+  --clr-orange-500: hsl(25, 97%, 53%);
 
   /* Neutral Colors */
-  --clr-grey-50: hsl(189, 47%, 97%);
-  --clr-grey-200:  hsl(185, 41%, 84%);
-  --clr-grey-400: hsl(184, 14%, 56%);
-  --clr-grey-500: hsl(186, 14%, 43%);
+  --clr-grey-500: hsl(217, 12%, 63%);
+  --clr-grey-900: hsl(213, 19%, 18%);
+  --clr-grey-850: hsl(207, 14%, 25%);
+  --clr-grey-950: hsl(218, 12%, 18%);
   --clr-white: hsl(0, 100%, 100%);
-  --clr-green-900: hsl(183, 100%, 15%);
-  --clr-red: hsl(4, 100%, 67%);
-
+  
   /* == TYPOGRAPHY == */
 
   /* font family */
-  --ff-body: 'Space Mono', sans-serif;
+  --ff-body: 'Overpass', sans-serif;
 
   /* font size */
-  --fs-form-input: 1.5rem;
+  --fs-paragraph: 0.89rem;
 
   /* font weights */
+  --fw-regular: 400;
   --fw-bold: 700;
 
   /* Spacing */
@@ -127,4 +120,130 @@ textarea:not([rows]) {
   --space-lg: 2rem;
   --space-xlg: 2.5rem;
   --space-xxlg: 3rem;
+}
+
+body {
+  min-height: 100svh;
+  background-color: var(--clr-grey-950);
+  display: grid;
+  place-items: center;
+  font-family: var(--ff-body);
+  line-height: 1.5;
+}
+
+.main__component--card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating--card {
+  width: 88%;
+  max-width: 22rem;
+  background-color: var(--clr-grey-900);
+  border-radius: var(--space-sm);
+  padding: var(--space-lg) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.star-wrapper {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--clr-grey-850);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.star-icon polygon {
+  fill: var(--clr-orange-500);
+}
+
+.rating--card--heading {
+  color: var(--clr-white);
+}
+
+.cta--text {
+  color: var(--clr-grey-500);
+  font-size: var(--fs-paragraph);
+}
+
+.btn--container {
+  display: flex;
+  gap: clamp(var(--space-xs), 4vw, var(--space-sm));
+}
+
+.rate--btn {
+  all: unset;
+  min-width: clamp(2rem, 10.5vw, 4rem);
+  min-height: clamp(2rem, 6vh, 4rem);
+  color: var(--clr-grey-500);
+  font-weight: var(--fw-bold);
+  border-radius: 50%;
+  border: 2px solid var(--clr-grey-900);
+  background-color: var(--clr-grey-850);
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.rate--btn.active {
+  background-color: var(--clr-white);
+}
+
+.rate--btn:hover {
+  background-color: var(--clr-orange-500);
+}
+
+.submit--btn {
+  all: unset;
+  width: 100%;
+  font-weight: var(--fw-bold);
+  color: var(--clr-grey-950);
+  background-color: var(--clr-orange-500);
+  border-radius: var(--space-lg);
+  padding-block: 0.8rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.submit--btn:hover {
+  background-color: var(--clr-white);
+}
+
+.rate--btn, .submit--btn {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.success--state {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+
+@media screen and (min-width: 48rem) {
+  .rating--card {
+    width: 60%;
+    max-width: 24rem;
+    gap: 1.8rem;
+  }
+
+  .rate--btn {
+    min-width: 3rem;
+    min-height: 3rem;
+  }
 }
