@@ -129,6 +129,7 @@ body {
   place-items: center;
   font-family: var(--ff-body);
   line-height: 1.5;
+  font-size: var(--space-lg);
 }
 
 .main__component--card {
