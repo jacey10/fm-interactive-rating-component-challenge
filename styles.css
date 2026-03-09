@@ -129,7 +129,6 @@ body {
   place-items: center;
   font-family: var(--ff-body);
   line-height: 1.5;
-  font-size: var(--space-lg);
 }
 
 .main__component--card {
@@ -152,11 +151,12 @@ body {
 }
 
 .rating--card, .success--state {
-  width: 88%;
-  max-width: 22rem;
+  width: 90%;
+  max-width: clamp(28rem, 30vw, 36rem);
   background-color: var(--clr-grey-900);
   border-radius: var(--space-sm);
   padding: var(--space-lg) var(--space-md);
+  font-size: 1.5rem;
 }
 
 .rating--card, .success--state.active {
@@ -186,7 +186,7 @@ body {
   fill: var(--clr-orange-500);
 }
 
-.rating--card--heading {
+.rating--card--heading, .success--state--heading {
   color: var(--clr-white);
 }
 
@@ -196,14 +196,15 @@ body {
 }
 
 .btn--container {
+  width: 100%;
   display: flex;
-  gap: clamp(var(--space-xs), 4vw, var(--space-sm));
+  gap: clamp(0.2rem, 2vw, 1rem);
 }
 
 .rate--btn {
   all: unset;
-  min-width: clamp(2rem, 10.5vw, 4rem);
-  min-height: clamp(2rem, 6vh, 4rem);
+  min-width: clamp(2.5rem, 13vw, 5rem);
+  min-height: clamp(2.5rem, 8vh, 5rem);
   color: var(--clr-grey-500);
   font-weight: var(--fw-bold);
   border-radius: 50%;
@@ -212,6 +213,7 @@ body {
   outline: none;
   text-align: center;
   cursor: pointer;
+  font-size: 0.7em;
 }
 
 .rate--btn.active {
@@ -231,7 +233,7 @@ body {
   color: var(--clr-grey-950);
   background-color: var(--clr-orange-500);
   border-radius: var(--space-lg);
-  padding-block: 0.8rem;
+  padding-block: 0.2rem;
   text-align: center;
   cursor: pointer;
 }
@@ -260,25 +262,43 @@ body {
   font-size: var(--fs-paragraph);
 }
 
-.success--state--heading {
-  color: var(--clr-white);
-}
-
 .success--state .message {
   text-align: justify;
   text-align-last: center;
 }
 
-
-@media screen and (min-width: 48rem) {
+@media  screen and (min-width: 32rem) {
   .rating--card, .success--state {
-    width: 70%;
+    width: 80%;
     max-width: 28rem;
-    gap: 1.8rem;
+    font-size: 1.8rem;
+  }
+
+  .btn--container {
+    gap: 0.7rem;
   }
 
   .rate--btn {
-    min-width: 3rem;
-    min-height: 3rem;
+    min-width: 4rem;
+    height: 4rem;
   }
+
+  .message {
+    font-size: 1.1rem;
+  }
+}
+
+
+@media screen and (min-width: 48rem) {
+
+  .rating--card, .success--state {
+    width: 60%;
+    max-width: 28rem;
+  }
+
+   .rate--btn {
+    width: 3.5rem;
+    height: 3.8rem;
+  }
+
 }
