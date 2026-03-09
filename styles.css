@@ -138,12 +138,27 @@ body {
   justify-content: center;
 }
 
-.rating--card {
+.sr-only {
+  position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  padding: 0;
+  margin: -0.0625rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0
+}
+
+.rating--card, .success--state {
   width: 88%;
   max-width: 22rem;
   background-color: var(--clr-grey-900);
   border-radius: var(--space-sm);
   padding: var(--space-lg) var(--space-md);
+}
+
+.rating--card, .success--state.active {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -174,7 +189,7 @@ body {
   color: var(--clr-white);
 }
 
-.cta--text {
+.message {
   color: var(--clr-grey-500);
   font-size: var(--fs-paragraph);
 }
@@ -202,8 +217,10 @@ body {
   background-color: var(--clr-white);
 }
 
-.rate--btn:hover {
-  background-color: var(--clr-orange-500);
+@media (hover: hover) {
+  .rate--btn:not(.active):hover {
+    background-color: var(--clr-orange-500);
+  }
 }
 
 .submit--btn {
@@ -226,19 +243,36 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-.success--state {
-  display: none;
+.success--state.active {
+  align-items: center;
 }
 
 .hidden {
   display: none;
 }
 
+.selection--text {
+  color: var(--clr-orange-500);
+  background-color: var(--clr-grey-850);
+  border-radius: var(--space-lg);
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--fs-paragraph);
+}
+
+.success--state--heading {
+  color: var(--clr-white);
+}
+
+.success--state .message {
+  text-align: justify;
+  text-align-last: center;
+}
+
 
 @media screen and (min-width: 48rem) {
-  .rating--card {
-    width: 60%;
-    max-width: 24rem;
+  .rating--card, .success--state {
+    width: 70%;
+    max-width: 28rem;
     gap: 1.8rem;
   }
 

@@ -14,14 +14,15 @@
   <body>
     
     <main class="main__component--card">
-      <form class="rating--card">
+      <h1 class="sr-only">RATING COMPONENT</h1>
+      <form class="rating--card hidden">
         <div class="star-wrapper">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="star-icon">
             <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
           </svg>
         </div>
         <h2 class="rating--card--heading"> How did we do?</h2>
-        <p class="cta--text">
+        <p class="message">
           Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
         </p>
         <div class="btn--container">
@@ -34,10 +35,10 @@
         <button type="submit" class="submit--btn">SUBMIT</button>
       </form>
 
-      <section class="success--state">
-        <img src="assets/images/illustration-thank-you.svg" alt="">
+      <section class="success--state active">
+        <img src="assets/images/illustration-thank-you.svg" alt="" class="illustration">
         <div class="selection--text"></div>
-        <h2>Thank you!</h2>
+        <h2 class="success--state--heading">Thank you!</h2>
         <p class="message">
           We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!
         </p>
