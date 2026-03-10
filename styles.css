@@ -122,6 +122,8 @@ textarea:not([rows]) {
   --space-xxlg: 3rem;
 }
 
+
+
 body {
   min-height: 100svh;
   background-color: var(--clr-grey-950);
@@ -211,15 +213,23 @@ body {
   text-align: center;
   cursor: pointer;
   font-size: 0.7em;
+  transition: trasform 3s ease-in, background-color 0.5s ease-in-out;
 }
 
 .rate--btn.active {
   background-color: var(--clr-white);
+  border: 2px solid var(--clr-orange-500);
 }
 
 @media (hover: hover) {
   .rate--btn:not(.active):hover {
     background-color: var(--clr-orange-500);
+    transform: scale(1.10);
+  }
+
+  .submit--btn:not(:disabled):hover {
+    background-color: var(--clr-white);
+    transform: translateY(-0.2rem);
   }
 }
 
@@ -233,15 +243,12 @@ body {
   padding-block: 0.2rem;
   text-align: center;
   cursor: pointer;
+  transition: background-color 0.5s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .submit--btn:disabled {
   cursor: not-allowed;
   opacity: 0.2;
-}
-
-.submit--btn:hover {
-  background-color: var(--clr-white);
 }
 
 .rate--btn, .submit--btn {
