@@ -18,7 +18,7 @@ container.addEventListener('click', (e) => {
             if (activeBtn) activeBtn.classList.remove('active');
             e.target.classList.add('active');
             submitBtn.disabled = false;
-            selectedRating = e.target.dataset.rate;
+            selectedRating = Number(e.target.dataset.rate);
         }
     }
 })
