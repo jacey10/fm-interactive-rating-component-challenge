@@ -171,12 +171,12 @@ body {
   background-color: var(--clr-grey-900);
   border-radius: var(--space-sm);
   padding: var(--space-lg) var(--space-md);
-  font-size: 1.5rem;
+  font-size: var(--space-md);
 }
 
 .star-wrapper {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: var(--space-xlg);
+  height: var(--space-xlg);
   background-color: var(--clr-grey-850);
   border-radius: 50%;
   display: flex;
@@ -185,8 +185,8 @@ body {
 }
 
 .star-icon {
-  width: 22px;
-  height: 22px;
+  width: 1.375rem;
+  height:  1.375rem;
 }
 
 .star-icon polygon {
@@ -205,17 +205,17 @@ body {
 .btn--container {
   width: 100%;
   display: flex;
-  gap: clamp(0.2rem, 2vw, 1rem);
+  gap: clamp(0.2rem, 2vw, var(--space-sm));
 }
 
 .rate--btn {
   all: unset;
-  min-width: clamp(2.5rem, 13vw, 5rem);
-  min-height: clamp(2.5rem, 8vh, 5rem);
+  min-width: clamp(var(--space-xxlg), 13vw, 5rem);
+  min-height: clamp(var(--space-xlg), 8vh, 5rem);
   color: var(--clr-grey-500);
   font-weight: var(--fw-bold);
   border-radius: 50%;
-  border: 2px solid var(--clr-grey-900);
+  border: 0.125rem solid var(--clr-grey-900);
   background-color: var(--clr-grey-850);
   outline: none;
   text-align: center;
@@ -226,7 +226,7 @@ body {
 
 .rate--btn.active {
   background-color: var(--clr-white);
-  border: 2px solid var(--clr-orange-500);
+  border: 0.125rem solid var(--clr-orange-500);
 }
 
 @media (hover: hover) {
