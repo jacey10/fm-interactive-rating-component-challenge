@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/jacey10/fm-interactive-rating-component-challenge)
-- Live Site URL: [Add live site URL here](https://jacey10.github.io/fm-interactive-rating-component-challenge/)
+- Solution URL: (https://github.com/jacey10/fm-interactive-rating-component-challenge)
+- Live Site URL: (https://jacey10.github.io/fm-interactive-rating-component-challenge/)
 
 ## My process
 
