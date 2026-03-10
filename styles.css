@@ -122,7 +122,15 @@ textarea:not([rows]) {
   --space-xxlg: 3rem;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .rate--btn {
+    transition: none;
+  }
 
+  .submit--btn {
+    transition: none;
+  }
+}
 
 body {
   min-height: 100svh;
