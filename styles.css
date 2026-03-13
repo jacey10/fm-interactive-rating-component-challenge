@@ -319,12 +319,11 @@ ul li {
   }
 
   .star-wrapper {
-    margin-block: 0.3rem;
+    margin-block-end: 1.4rem;
   }
 
   .main__section--heading {
     font-size: 1.7rem;
-    margin-block-start: 1rem;
   }
 
   .main__section--message {
