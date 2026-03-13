@@ -191,7 +191,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-block-end: 0.5rem;
 }
 
 .star-icon {
@@ -316,27 +315,26 @@ ul li {
     width: 70%;
     max-width: 24rem;
     font-size: 1rem;
-    padding: 2rem 1.5rem;
+    padding: 1.5rem;
   }
 
   .main__section--heading {
     font-size: 1.6rem;
-    margin-block-start: 0.5rem;
   }
 
   .main__section--message {
-    font-size: 1rem;
-    margin-block-end: 0.5rem;
+    font-size: 0.89rem;
+    margin-block-end: 0.2rem;
   }
 
   .btn--container {
     gap: 0.8rem;
-    margin-block-end: 2rem;
+    margin-block-end: 1.5rem;
   }
 
   .rate--btn {
-    min-width: 3.5rem;
-    min-height: 3.5rem;
+    min-width: 3.35rem;
+    min-height: 3.35rem;
   }
 
   .submit--btn {
