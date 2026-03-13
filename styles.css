@@ -100,6 +100,7 @@ textarea:not([rows]) {
   --clr-grey-850: hsl(207, 14%, 25%);
   --clr-grey-950: hsl(218, 12%, 18%);
   --clr-white: hsl(0, 100%, 100%);
+  ---clr-dark-grey: hsl(214, 17%, 8%);
   
   /* == TYPOGRAPHY == */
 
@@ -134,7 +135,7 @@ textarea:not([rows]) {
 
 body {
   min-height: 100svh;
-  background-color: var(--clr-grey-950);
+  background-color: var(---clr-dark-grey);
   display: grid;
   place-items: center;
   font-family: var(--ff-body);
@@ -171,7 +172,6 @@ body {
   background-color: var(--clr-grey-900);
   border-radius: var(--space-md);
   padding: var(--space-lg) var(--space-md);
-  font-size: var(--space-md);
 }
 
 .star-wrapper {
@@ -202,6 +202,16 @@ body {
   font-size: var(--fs-paragraph);
 }
 
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  padding: 0;
+}
+
 .btn--container {
   width: 100%;
   display: flex;
@@ -220,13 +230,12 @@ body {
   outline: none;
   text-align: center;
   cursor: pointer;
-  font-size: 0.7em;
+  font-size: 0.8em;
   transition: trasform 3s ease-in, background-color 0.5s ease-in-out;
 }
 
 .rate--btn.active {
   background-color: var(--clr-white);
-  border: 0.125rem solid var(--clr-orange-500);
 }
 
 @media (hover: hover) {
@@ -235,7 +244,7 @@ body {
     transform: scale(1.10);
   }
 
-  .submit--btn:not(:disabled):hover {
+  .submit--btn:hover {
     background-color: var(--clr-white);
     transform: translateY(-0.2rem);
   }
@@ -244,19 +253,14 @@ body {
 .submit--btn {
   all: unset;
   width: 100%;
+  font-size: 0.8em;
   font-weight: var(--fw-bold);
   color: var(--clr-grey-950);
   background-color: var(--clr-orange-500);
   border-radius: var(--space-lg);
-  padding-block: 0.2rem;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.5s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.submit--btn:disabled {
-  cursor: not-allowed;
-  opacity: 0.2;
 }
 
 .rate--btn, .submit--btn {
@@ -265,6 +269,7 @@ body {
 
 .success--state {
   align-items: center;
+  padding: 2rem;
 }
 
 .hidden {
@@ -288,20 +293,20 @@ body {
   .rating--card, .success--state {
     width: 80%;
     max-width: 28rem;
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
 
   .btn--container {
-    gap: 0.7rem;
+    gap: 1rem;
   }
 
   .rate--btn {
-    min-width: 4rem;
-    height: 4rem;
+    min-width: 3rem;
+    height: 3rem;
   }
 
-  .message {
-    font-size: 1.1rem;
+  .submit--btn {
+    padding-block: 0.5rem;
   }
 }
 
@@ -310,12 +315,7 @@ body {
 
   .rating--card, .success--state {
     width: 60%;
-    max-width: 28rem;
-  }
-
-   .rate--btn {
-    width: 3.5rem;
-    height: 3.8rem;
+    max-width: 24rem;
   }
 
 }

@@ -12,21 +12,24 @@ container.addEventListener('click', (e) => {
 
         if (activeBtn === e.target) {
             activeBtn.classList.remove('active');
-            submitBtn.disabled = true;
+            submitBtn.setAttribute('aria-disabled', 'true');
             selectedRating = 0;
         } else {
             if (activeBtn) activeBtn.classList.remove('active');
             e.target.classList.add('active');
-            submitBtn.disabled = false;
+            submitBtn.removeAttribute('aria-disabled');
             selectedRating = Number(e.target.dataset.rate);
         }
     }
 })
 
-submitBtn.addEventListener('click', showSuccess);
+submitBtn.addEventListener('click', () => {
+    if (selectedRating) {
+        showSuccess();
+    }
+});
 
 function showSuccess() {
-    submitBtn.disabled = true;
     ratingCard.classList.add('hidden');
     successBlock.classList.remove('hidden');
     ratingNum.textContent = selectedRating;

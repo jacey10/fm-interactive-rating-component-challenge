@@ -25,19 +25,22 @@
         <p class="message">
           Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
         </p>
-        <div id="btnContainer" class="btn--container">
-          <button type="button" data-rate="1" class="rate--btn">1</button>
-          <button type="button" data-rate="2" class="rate--btn">2</button>
-          <button type="button" data-rate="3" class="rate--btn">3</button>
-          <button type="button" data-rate="4" class="rate--btn">4</button>
-          <button type="button" data-rate="5" class="rate--btn">5</button>
-        </div>
-        <button type="submit" id="submitBtn" class="submit--btn" disabled>SUBMIT</button>
+        <fieldset>
+          <legend class="sr-only">Rate your experience</legend>
+          <div id="btnContainer" class="btn--container">
+            <button type="button" data-rate="1" class="rate--btn">1</button>
+            <button type="button" data-rate="2" class="rate--btn">2</button>
+            <button type="button" data-rate="3" class="rate--btn">3</button>
+            <button type="button" data-rate="4" class="rate--btn">4</button>
+            <button type="button" data-rate="5" class="rate--btn">5</button>
+          </div>
+        </fieldset>
+        <button type="submit" id="submitBtn" class="submit--btn" aria-disabled="true" aria-describedby="submit-hint">SUBMIT</button>
       </section>
 
       <section id="successPage" class="success--state hidden">
         <img src="assets/icons/illustration-thank-you.svg" alt="image of a printer with a slip" class="illustration">
-        <div class="selection--text">You selected <span class="rating--number"></span> out of 5</div>
+        <div class="selection--text" aria-live="polite">You selected <span class="rating--number"></span> out of 5</div>
         <h2 class="success--state--heading">Thank you!</h2>
         <p class="message">
           We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!
