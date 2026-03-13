@@ -321,12 +321,12 @@ ul li {
 
   .btn--container {
     gap: 1rem;
-    margin-block-end: 1.6rem;
+    margin-block-end: 2rem;
   }
 
   .rate--btn {
-    min-width: 3rem;
-    min-height: 3rem;
+    min-width: 3.5rem;
+    min-height: 3.5rem;
   }
 
   .submit--btn {
@@ -334,7 +334,7 @@ ul li {
   }
 
   .success--state .message {
-    font-size: 0.89rem;;
+    font-size: 1.3rem;;
   }
 }
 
