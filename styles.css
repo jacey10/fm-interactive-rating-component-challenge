@@ -237,6 +237,10 @@ legend {
   margin-block-end: 1.5rem;
 }
 
+ul li {
+  list-style: none;
+}
+
 .rate--btn {
   all: unset;
   min-width: clamp(var(--space-xlg), 2.5vw, 5rem);
@@ -264,7 +268,7 @@ legend {
   color: var(--clr-grey-950);
   background-color: var(--clr-orange-500);
   border-radius: var(--space-lg);
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: var(--fw-bold);
   padding-block: 0.5rem;
   text-align: center;
@@ -316,17 +320,17 @@ legend {
   }
 
   .btn--container {
-    gap: 1.4rem;
+    gap: 1rem;
     margin-block-end: 1.6rem;
   }
 
   .rate--btn {
-    min-width: 2.6rem;
-    min-height: 2.6rem;
+    min-width: 3rem;
+    min-height: 3rem;
   }
 
   .submit--btn {
-    padding-block: 0.5rem;
+    padding-block: 0.6rem;
   }
 
   .success--state .message {

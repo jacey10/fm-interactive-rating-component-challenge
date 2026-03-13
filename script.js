@@ -1,6 +1,7 @@
-const ratingForm = document.querySelector('.main__rating--form');
+const ratingForm = document.querySelector('.rating--form');
 const ratingCard = document.getElementById('card');
 const container = document.getElementById('btnContainer');
+const submitBtn = document.getElementById('submitBtn');
 const successBlock = document.getElementById('successPage');
 const ratingNum = document.querySelector('.rating--number')
 
