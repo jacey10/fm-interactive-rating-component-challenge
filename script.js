@@ -1,8 +1,8 @@
+const ratingForm = document.querySelector('.main__rating--form');
 const ratingCard = document.getElementById('card');
 const container = document.getElementById('btnContainer');
-const submitBtn = document.getElementById('submitBtn');
 const successBlock = document.getElementById('successPage');
-const ratingNum = document.querySelector('.rating--number');
+const ratingNum = document.querySelector('.rating--number')
 
 let selectedRating = 0;
 
@@ -23,12 +23,11 @@ container.addEventListener('click', (e) => {
     }
 })
 
-submitBtn.addEventListener('click', () => {
-    if (selectedRating) {
-        showSuccess();
-    }
+ratingForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (selectedRating) showSuccess();
 });
-
+   
 function showSuccess() {
     ratingCard.classList.add('hidden');
     successBlock.classList.remove('hidden');
