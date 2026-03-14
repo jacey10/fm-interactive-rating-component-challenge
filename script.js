@@ -1,5 +1,5 @@
-const ratingForm = document.querySelector('.rating--form');
-const ratingCard = document.getElementById('card');
+const form = document.getElementById('ratingForm');
+const card = document.getElementById('card');
 const container = document.getElementById('btnContainer');
 const submitBtn = document.getElementById('submitBtn');
 const successBlock = document.getElementById('successPage');
@@ -24,13 +24,13 @@ container.addEventListener('click', (e) => {
     }
 })
 
-ratingForm.addEventListener('submit', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
     if (selectedRating) showSuccess();
 });
    
 function showSuccess() {
-    ratingCard.classList.add('hidden');
+    card.classList.add('hidden');
     successBlock.classList.remove('hidden');
     ratingNum.textContent = selectedRating;
 }

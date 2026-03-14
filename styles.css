@@ -328,7 +328,6 @@ ul li {
 
   .main__section--message {
     font-size: 0.93rem;
-    margin-block-end: 0.2rem;
   }
 
   .btn--container {
@@ -346,9 +345,7 @@ ul li {
     padding-block: 0.6rem;
   }
 
-  .success--state .message {
-    font-size: 1.3rem;;
-  }
+  
 }
 
 
