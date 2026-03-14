@@ -184,8 +184,8 @@ body {
 }
 
 .star-wrapper {
-  width: var(--space-xlg);
-  height: var(--space-xlg);
+  width: var(--space-xxlg);
+  height: var(--space-xxlg);
   background-color: var(--clr-grey-850);
   border-radius: 50%;
   display: flex;
@@ -194,8 +194,8 @@ body {
 }
 
 .star-icon {
-  width: 1.375rem;
-  height:  1.375rem;
+  width: 1.5rem;
+  height:  1.5rem;
 }
 
 .star-icon polygon {
@@ -316,6 +316,7 @@ ul li {
     max-width: 24rem;
     font-size: 1rem;
     padding: 2rem 1.5rem;
+    gap: var(--space-sm);
   }
 
   .star-wrapper {
