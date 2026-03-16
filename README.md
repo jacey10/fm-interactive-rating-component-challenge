@@ -61,6 +61,6 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://github.com/jacey10)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/jacey10)
-- Twitter - [@yourusername](https://www.twitter.com/jacey_muna)
+- Website - [Jacey Blog](https://www.jacey.hashnode.dev/)
+- Frontend Mentor - [@jacey10](https://www.frontendmentor.io/profile/jacey10)
+- Twitter - [@jacey_muna](https://x.com/jacey_muna)
